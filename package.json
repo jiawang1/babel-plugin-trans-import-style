@@ -4,7 +4,8 @@
   "description": "translate js reference to css",
   "main": "./src/index.js",
   "scripts": {
-    "test": "node ./test/test.js"
+    "test": "node ./test/test.js",
+    "debug": "node --inspect-brk ./test/test.js"
   },
   "repository": {
     "type": "git",

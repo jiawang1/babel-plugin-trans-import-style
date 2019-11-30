@@ -6,7 +6,7 @@ const path = require('path');
 const code = fs.readFileSync(path.join(process.cwd(),'./test/test.case.js')).toString()
 
 const transformedCode = babel.transform(code, {
-  plugins: [plugin],
+  plugins: [[plugin,{'pattern': /^\.\/style(\.js)?$/, 'action':{'add':'../theme/theme.css', 'replace':'./style.css'}}]],
   code: true,
   ast: false,
 }).code
