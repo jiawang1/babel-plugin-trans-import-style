@@ -11,4 +11,9 @@ const transformedCode = babel.transform(code, {
   ast: false,
 }).code
 
-fs.writeFileSync(`${__dirname}/out.js`, transformedCode);
+fs.writeFileSync(`${__dirname}/out1.js`, transformedCode);
+fs.writeFileSync(`${__dirname}/out2.js`, babel.transform(code, {
+  plugins: [[plugin]],
+  code: true,
+  ast: false,
+}).code);

@@ -1,11 +1,15 @@
 "use strict";
 
+const stylePattern = /^\.\/style(\.js)?$/;
+const addAction = '../theme/theme.css';
+const replaceAction = './style.css';
+
 module.exports = function({ types: t }) {
   return {
     visitor: {
       ImportDeclaration(path, options) {
         const {
-          opts: { pattern, action }
+          opts: { pattern = stylePattern, action = {'add':'../theme/theme.css', 'replace':'./style.css'} }
         } = options;
         if (pattern && action && t.isStringLiteral(path.node.source)) {
           const currentStatement = path.node.source.value;
