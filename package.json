@@ -1,0 +1,28 @@
+{
+  "name": "babel-plugin-trans-import-style",
+  "version": "0.1.0",
+  "description": "translate js reference to css",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiawang1/babel-plugin-trans-import-style.git"
+  },
+  "keywords": [
+    "babel",
+    "plugin",
+    "import"
+  ],
+  "author": "Jay Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jiawang1/babel-plugin-trans-import-style/issues"
+  },
+  "homepage": "https://github.com/jiawang1/babel-plugin-trans-import-style#readme",
+  "dependencies": {
+    "@babel/core": "^7.7.2"
+  },
+  "files":["src/**"]
+}
